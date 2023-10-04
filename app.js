@@ -34,7 +34,7 @@ const reviewRoutes = require('./routes/reviews');
 // const ExpressError = require('./utils/ExpressError');
 
 
-const uri = "mongodb+srv://saurabh01:solution28@cluster0.4rrtc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = "mongodb+srv://saurabhpatel101:solution28@cluster01.k5annrv.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.connect(uri,{
     useNewUrlParser:true,
@@ -42,7 +42,7 @@ mongoose.connect(uri,{
     useUnifiedTopology:true,
     useFindAndModify:false
 });
-
+console.log("connected ");
 const db = mongoose.connection;
 db.on("error",console.error.bind(console,"connection error:"));
 db.once("open",() => {
